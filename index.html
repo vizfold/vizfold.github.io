@@ -4,69 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VizFold - Visualizing & Interpretable Protein Folding</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background: #0073e6; color: white; padding: 20px; text-align: center; }
-        nav { background: #f4f4f4; padding: 10px; text-align: center; }
-        nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; }
-        section { padding: 20px; max-width: 800px; margin: auto; }
-        footer { background: #333; color: white; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%; }
-        .logo-container { text-align: center; margin: 20px 0; }
-        .logo-container img { max-width: 200px; height: auto; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="VizFold Logo">
-        </div>
-        <h1>VizFold: Visualizing & Interpretable Protein Folding</h1>
-        <p>Unlocking the Interpretability of AlphaFold-like Models</p>
-        <p><em>This project is in the early stages as part of an EAGER award and just started. Expect updates in Summer 2025.</em></p>
+        <h1>VizFold</h1>
+            <p class="hero-tagline">
+            Composable infrastructure for protein structure prediction, tracing,
+            and interpretability on HPC systems.
+            </p>
+            <p class="hero-subtitle">
+            Supporting ESMFold, Boltz-2, intermediate representation extraction,
+            and reproducible deployment workflows.
+            </p>
     </header>
     
     <nav>
         <a href="#about">About</a>
-        <a href="#goals">Project Goals</a>
+        <a href="#features">Core Features</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#backends">Supported Backends</a>
+        <a href="#paper">PEARC 2026 Paper</a>
         <a href="#team">Team</a>
         <a href="#contribute">Contribute</a>
     </nav>
     
     <section id="about">
-        <h2>About VizFold</h2>
-        <p>VizFold is a research initiative aimed at developing advanced visualization and interpretability techniques for AlphaFold and similar protein folding models. Our work bridges computational science and biology to enhance understanding of protein folding mechanisms.</p>
+        <div class="container">
+            <h2>About VizFold</h2>
+            <p>VizFold is a research initiative aimed at developing advanced visualization and interpretability techniques for AlphaFold and similar protein folding models. Our work bridges computational science and biology to enhance understanding of protein folding mechanisms.</p>
+        </div>
     </section>
-    
-    <section id="goals">
-        <h2>Project Goals</h2>
-        <ul>
-            <li>Develop visualization techniques for interpreting AlphaFold-like models</li>
-            <li>Extract interpretable intermediate representations of protein folding</li>
-            <li>Enable real-time, web-based visualization using Cybershuttle</li>
-        </ul>
+
+    <section id="features">
+        <div class="container">
+            <h2>Core Features</h2>
+                <h3>Attention Extraction</h3>
+                <p>Capture and analyze model attention patterns across protein sequences.</p>
+                <h3>Intermediate Representations</h3>
+                <p>Expose embeddings, pair representations, and internal model states for analysis.</p>
+                <h3>Arc Visualizations</h3>
+                <p>Generate arc-diagram views for long-range residue relationships.</p>
+                <h3>HPC Deployment</h3>
+                <p>Support reproducible execution across cluster and high-performance environments.</p>
+        </div>
+        </section>
+
+    <section id="architecture">
+        <div class="container">
+            <h2>Framework Architecture</h2>
+            <p>
+            VizFold separates model execution, representation extraction, visualization,
+            and HPC deployment into composable workflow components.
+            </p>
+            <div class="figure-wrap">
+                <img src="framework.png" alt="VizFold framework architecture" class="figure">
+            </div>
+            
+        </div>
+        </section>
         
-        <p>A bit more detailed description of the project and recent results are summarized in <a href="https://figshare.com/articles/presentation/VizFold_Advancing_Protein_Science_through_the_Visualization_and_Interpretation_of_AlphaFold-like_Models/29971720?backTo=%2Fcollections%2FNAIRR_Pilot_Demonstration_Projects%2F7902128&file=57368194" target="_blank">NAIRR presentation.</a></p>
-    </section>    
-        
+    <section id="backends">
+        <div class="container">
+            <h2>Supported Backends</h2>
+            <h3>ESMFold</h3>
+            <p>Fast protein structure prediction with support for representation tracing.</p>
+            <h3>Boltz-2</h3>
+            <p>Modern structure prediction backend integrated into reproducible workflows.</p>
+            <h3>HPC Workflows</h3>
+            <p>Deployment patterns for running prediction and analysis pipelines on clusters.</p>
+        </div>
+        </section>
+
+    <section id="paper">
+        <div class="container">
+            <p class="eyebrow">Presented at PEARC 2026</p>
+            <h2>A Composable and Modular Framework for Protein Structure Prediction on HPC</h2>
+            <p>
+                VizFold introduces a modular infrastructure for running protein structure
+                prediction workflows, extracting intermediate representations, and supporting
+                interpretability analysis on HPC systems.
+            </p>
+            <div class="button-row">
+                <a href="pearc26-97.pdf" class="button" target="_blank">PDF</a>
+                <a href="https://camps.aptaracorp.com/ACM_PMS/PMS/ACM/PEARC26/97/643428d6-4c14-11f1-b513-16ffd757ba29/OUT/pearc26-97.html" class="button secondary" target="_blank">HTML</a>
+                <a href="https://doi.org/10.1145/3785462.3815886" class="button secondary" target="_blank">DOI</a>
+            </div>
+        </div>
+        </section>
+
     <section id="team">
-        <h2>Project Team</h2>
-        <p><strong>Dr. Giri Krishnan</strong> - PI, Georgia Tech</p>
-        <p><strong>Dr. Polo Chau</strong> - Co-PI, Georgia Tech</p>
-        <p><strong>Dr. Tyler Hayes</strong> Georgia Tech</p>
-        <p><strong>Suresh Marru</strong> Georgia Tech</p>
+        <div class="container">
+            <h2>Project Team</h2>
+            <p><strong>Dr. Giri Krishnan</strong> - PI, Georgia Tech</p>
+            <p><strong>Dr. Polo Chau</strong> - Co-PI, Georgia Tech</p>
+            <p><strong>Dr. Tyler Hayes</strong> Georgia Tech</p>
+            <p><strong>Suresh Marru</strong> Georgia Tech</p>
+        </div>
+        
     </section>
     
     <section id="contribute">
-        <h2>Contribute to VizFold</h2>
+        <div class="container">
+            <h2>Contribute to VizFold</h2>
         <p>We welcome researchers, developers, and contributors! Check out our <a href="https://github.com/VizFold" target="_blank">GitHub repository</a> for ways to get involved.</p>
-        <p>
-            
-        </p>
+        </div>
+        
     </section>
     
     <footer>
-        <p>&copy; 2025 VizFold Project. All Rights Reserved.</p>
+        <p>&copy; 2026 VizFold Project. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
-
